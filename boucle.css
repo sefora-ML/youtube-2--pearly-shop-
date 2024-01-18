@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+* {
+    font-family: 'Poppins','sans-serif';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #fffaf0;
+    --second-bg-color: #ffebcd;
+    --text-color: #000000;
+    --main-color: #ffb6c1;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header.sticky {
+    border-bottom: .1rem solid rgba(0, 0, 0, .2);
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none; 
+}
+
+.sec {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 2rem;
+    justify-content: space-around;
+}
+
+.card {
+    width: 30%;
+    margin: 0 1.5rem 2rem 1.5rem;
+    padding: 1rem;
+    background: var(--second-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card .title {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+
+.card .box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
+
+.card .price {
+    font-size: 2rem;
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.card .btn {
+    padding: 1rem 2.5rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.card .btn a {
+    color: var(--bg-color);
+}
+
+.card .btn:hover {
+    box-shadow: none;
+}
+
+span {
+    color: var(--main-color);
+    font-family: tangerine , cursive;
+    font-size: 12rem;
+}
+
+.sec h2 {
+    font-size: 12rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    font-family: tangerine , cursive;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5rem ease;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+}
+
+/* BREAKPOINTS */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+        .card {
+            width: 45%;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+}
+
+
+@media (max-width: 617px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+}
