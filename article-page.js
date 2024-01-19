@@ -61,3 +61,12 @@ for(options of option) {
         selectBtn.classList.remove('active');
     }
 }
+
+/* ========================================= POP-UP BUTTON ================================================= */
+
+const showPopup = document.querySelector('.show-popup');
+const popupContainer = document.querySelector('.popup-container');
+
+showPopup.onclick = () => {
+    popupContainer.classList.add('active');
+}

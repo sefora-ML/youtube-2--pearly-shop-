@@ -162,6 +162,8 @@ span {
     margin-top: 10px;
 }
 
+
+
 .list .option {
     display: flex;
     align-items: center;
@@ -223,6 +225,68 @@ span {
 
 .desc a:hover {
     font-size: 2rem;
+}
+
+.show-popup {
+    box-sizing: border-box;
+    padding: 14px 14px;
+    background: var(--main-color);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 1.8rem;
+    position: absolute;
+    top: 320px;
+    left: 720px;
+}
+
+.popup-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.popup-container.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.select-menu .popup-container .popup-box {
+    width: 500px;
+    background: purple;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+    padding: 30px;
+}
+
+.popup-box h1 {
+    color: var(--text-color);
+    line-height: 1;
+}
+
+.popup-box p {
+    color: var(--text-color);
+    margin: 12px 0 20px;
+}
+
+.popup-box .close-btn {
+    width: 100%;
+    height: 45px;
+    background: var(--main-color);
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--text-color);
+
 }
 
 /* BREAKPOINTS */
